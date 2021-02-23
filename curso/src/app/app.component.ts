@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Curso de Angular 11';
-  logo = '../assets/img/logo_angular.svg'
+  logo = '../assets/img/logo_angular.svg';
 }
