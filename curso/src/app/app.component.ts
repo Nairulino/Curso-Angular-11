@@ -5,7 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'Curso de Angular 11';
-  logo = '../assets/img/logo_angular.svg';
-}
+export class AppComponent { }
