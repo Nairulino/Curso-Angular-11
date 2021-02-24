@@ -1,1 +1,8 @@
-<p>tarea works!</p>
+<input type="checkbox" class="form-check-input" name="is-completed" id="is-completed" [(ngModel)]="tarea.isCompleted"
+  (change)="onChangeSend()">
+<span [ngClass]="{completa: tarea.isCompleted}"> {{ tarea.titulo }} </span>
+<span>|</span>
+<span> Asignada a: {{ tarea.responsable }} </span>
+<span class="boton" (click)="onDeleteSend()">
+  🗑
+</span>

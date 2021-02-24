@@ -17,9 +17,9 @@
   <ul class="list-group">
     <li *ngFor="let item of tareas" class="list-group-item">
       <input type="checkbox" class="form-check-input" name="is-completed" id="is-completed" [(ngModel)]="item.isCompleted">
-      <span [ngClass]="{completa: item.isCompleted}">{{item.titulo}}</span>
-      <span>|</span>  
-      <span>Asignada a: {{item.responsable}}</span> 
+      <span [ngClass]="{completa: item.isCompleted}"> {{ item.titulo }} </span>
+      <span> | </span>  
+      <span> Asignada a: {{ item.responsable }} </span> 
     </li>
   </ul>
 </div>
