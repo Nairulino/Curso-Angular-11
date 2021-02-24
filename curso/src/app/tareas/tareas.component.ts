@@ -3,9 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'ind-tareas',
   template: `
-    <p>
-      tareas works!
-    </p>
+    <div class="row">
+      <ind-lista-simple class="col-6"></ind-lista-simple>
+      <ind-lista class="col-6"></ind-lista>
+    </div>
   `,
   styles: [
   ]

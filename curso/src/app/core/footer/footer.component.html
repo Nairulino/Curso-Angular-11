@@ -4,8 +4,8 @@
       <address class="col-12">
           {{autor}}
       </address>
-      <p class="col-12">
-          {{fecha}}
+      <p class="col-12">                            
+          {{fecha | date : 'fullDate' | titlecase}}
       </p>
   </div>
 </div>

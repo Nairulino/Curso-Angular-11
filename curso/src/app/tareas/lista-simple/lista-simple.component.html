@@ -1,0 +1,30 @@
+<h2>Lista simple</h2>
+<div class="form-group">
+  <label for="titulo">Descripción de la tarea</label>
+  <input type="text" [(ngModel)]="tarea.titulo"
+    class="form-control" name="titulo" id="titulo">
+</div>
+<div class="form-group">
+  <label for="responsable">Responsable de la tarea</label>
+  <input type="text" [(ngModel)]="tarea.responsable"
+    class="form-control" name="responsable" id="resp">
+</div>
+
+<button type="button" (click)="onClickAdd()" class="btn btn-primary">Guardar</button>
+
+<div *ngIf="tareas.length; else noTareas">
+  <h3>Lista simple de tareas</h3>
+  <ul class="list-group">
+    <li *ngFor="let item of tareas" class="list-group-item">
+      <input type="checkbox" class="form-check-input" name="is-completed" id="is-completed" [(ngModel)]="item.isCompleted">
+      <span [ngClass]="{completa: item.isCompleted}">{{item.titulo}}</span>
+      <span>|</span>  
+      <span>Asignada a: {{item.responsable}}</span> 
+    </li>
+  </ul>
+</div>
+
+
+<ng-template #noTareas>
+  <p>Anímate con tu primera tarea para la lista simple!</p>
+</ng-template>
