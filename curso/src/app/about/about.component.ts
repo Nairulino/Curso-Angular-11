@@ -2,11 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ind-about',
-  template: `
-    <p>
-      about works!
-    </p>
-  `,
+  templateUrl: './about.component.html',
   styles: [
   ]
 })
