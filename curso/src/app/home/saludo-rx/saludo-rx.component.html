@@ -1,0 +1,7 @@
+<h2>Saludo</h2>
+
+<input type="text" [placeholder]="mensaje" [formControl]="fcNombre">
+
+<button (click)="onClickBorrar()" type="button">Borrar</button>
+
+<p>Hola {{ fcNombre.value ? fcNombre.value.toUpperCase() : 'amigo' }}</p>
