@@ -11,3 +11,14 @@
     <p>Officiis similique soluta commodi rerum blanditiis voluptas excepturi dicta error unde, eaque non tenetur impedit, nulla neque aliquam inventore temporibus doloremque corporis beatae officia in odio eius. Ipsam, eius eligendi?</p>  
   </ng-container>
 </ind-post>
+<ngb-carousel *ngIf="imagenes" showNavigationIndicators=true>
+  <ng-template ngbSlide *ngFor="let item of imagenes">
+    <div class="picsum-img-wrapper">
+      <img [src]="item.imagen" alt="Random second slide">
+    </div>
+    <div class="carousel-caption">
+      <h3>{{ item.titulo | truncar : 10 }}</h3>
+      <p>{{ item.texto | truncar : 20 }}</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
