@@ -7,6 +7,7 @@ import { InfoComponent } from './info/info.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoreModule } from './core/core.module';
 import { registerLocaleData } from '@angular/common';
+// import { StorageService } from './services/storage.service';
 
 registerLocaleData(localeES)
 
@@ -21,7 +22,9 @@ registerLocaleData(localeES)
     NgbModule,
     CoreModule
   ],
-  providers: [ {provide: LOCALE_ID, useValue: 'es'}], // Aquí se cambia globalmente el idioma de la aplicación
+  providers: [ {provide: LOCALE_ID, useValue: 'es'}, // Aquí se cambia globalmente el idioma de la aplicación
+                // StorageService -> forma antiugar de registrar el servicio
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

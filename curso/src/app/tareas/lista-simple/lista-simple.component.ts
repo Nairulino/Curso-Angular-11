@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Tarea } from 'src/app/models/tarea';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'ind-lista-simple',
@@ -9,11 +10,17 @@ import { Tarea } from 'src/app/models/tarea';
 export class ListaSimpleComponent implements OnInit {
   tarea: Tarea
   tareas: Array<Tarea>
-  constructor() { }
+  constructor(private storage: StorageService) {
+    this.storage.store$.subscribe(
+      data => {
+        this.tareas = data
+      }
+    )
+   }
 
   ngOnInit(): void {
     this.tarea = new Tarea()
-    this.tareas = []
+    this.tareas = this.storage.getTareas()
   }
 
   onClickAdd(): void {
@@ -22,6 +29,7 @@ export class ListaSimpleComponent implements OnInit {
     }
     this.tareas.push(this.tarea)
     this.tarea = new Tarea()
+    this.storage.setTareas(this.tareas)
     console.log(this.tareas)
   }
 

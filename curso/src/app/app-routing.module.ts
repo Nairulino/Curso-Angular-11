@@ -20,6 +20,10 @@ const routes: Routes = [
     path: 'cursos', 
     loadChildren: () => import('./cursos/cursos.module').then(m => m.CursosModule)
   },
+  {
+    path: 'libros', 
+    loadChildren: () => import('./libros/libros.module').then(m => m.LibrosModule)
+  },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   // { path: '**', component: PathNotFoundComponent }
   { path: '**', redirectTo: 'home' } // borrar en caso de que no se ponga pag 404
