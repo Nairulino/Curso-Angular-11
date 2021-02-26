@@ -7,6 +7,7 @@ import { InfoComponent } from './info/info.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoreModule } from './core/core.module';
 import { registerLocaleData } from '@angular/common';
+import { HttpClientModule} from '@angular/common/http';
 // import { StorageService } from './services/storage.service';
 
 registerLocaleData(localeES)
@@ -19,6 +20,7 @@ registerLocaleData(localeES)
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgbModule,
     CoreModule
   ],

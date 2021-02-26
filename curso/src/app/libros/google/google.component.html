@@ -1,11 +1,9 @@
-<h2>Mock libros</h2>
+<h2>Google Libros</h2>
 <div class="form-group">
   <label for="clave">Buscar titulos que contengan:</label>
   <input type="text" class='form-control' name='clave' [(ngModel)]="clave">
 </div>
 <button type="button" class="btn btn-primary" (click)="onBuscar()">Buscar</button>
-<button type="button" class="btn btn-secondary" (click)="onBuscarAsync()">Buscar Async</button>
-<button type="button" class="btn btn-info" (click)="onBuscarRx()">Buscar Rx</button>
 <div *ngIf="libros.length">
   <h3>Lista de libros</h3>
   <ul class="list-group">
@@ -16,3 +14,5 @@
     </li>
   </ul>
 </div>
+
+<!-- {{ datos$ | async | json}} -->

@@ -22,20 +22,24 @@ export class MockComponent implements OnInit {
     this.libros = []
     this.libros = this.lbs.getMock(this.clave)
     console.log(this.libros)
+    this.clave = ''
   }
 
   // onBuscarAsync(): void{
   //   this.lbs.getMockAsync(this.clave)
   //   .then(data => this.libros = data)
+  //    this.clave = ''
   // }
 
   async onBuscarAsync(): Promise<void>{
     this.libros = []
     this.libros = await this.lbs.getMockAsync(this.clave)
+    this.clave = ''
   }
 
   onBuscarRx(): void{
     this.libros = []
     this.lbs.getMockRx(this.clave).subscribe(data => {this.libros = data})
+    this.clave = ''
   }
 }
